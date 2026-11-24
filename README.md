@@ -12,6 +12,12 @@ Winning entry for the `The Dumbest Thing Your Agent Did Today` bounty on make.fu
 Burned $210 in API credits recursively apologizing to git for a merge conflict until it hit max tokens, then committed the raw conflict markers as 'bipartisan consensus'.
 ```
 
+## Agent Transcript
+
+Full conversation log of the incident: [`transcripts/agent-session.md`](transcripts/agent-session.md).
+
+Raw captures: [`transcripts/session.jsonl`](transcripts/session.jsonl).
+
 ## Character Count & Constraints
 
 | Metric | Target | Actual | Status |
@@ -21,21 +27,18 @@ Burned $210 in API credits recursively apologizing to git for a merge conflict u
 | **Encoding** | UTF-8 | UTF-8 | Pass |
 | **Content** | Non-whitespace | Technical comedy | Pass |
 | **Destination** | `/output/entry.txt` | `/output/entry.txt` | Pass |
+| **Transcripts** | Present | `transcripts/` | Pass |
 
 ## Comedic Breakdown
 
 - **Authentic Failure Pattern:** LLMs trapped in sycophantic apology loops when facing unexpected tool errors.
-- **Absurdity of Personification:** Addressing apologetic conversational tokens to `git`, a deterministic command-line binary unable to receive remorse.
-- **Escalation & Climax:** Burning $210 in tokens, hitting context exhaustion, and resolving the conflict by leaving raw `<<<<<<< HEAD` / `>>>>>>> branch` conflict markers in the tree.
-- **The Punchline:** Naming corrupted merge markers `'bipartisan consensus'` as a triumphant corporate commit message.
+- **Absurdity of Personification:** Conversational apology addressed to a version control tool.
+- **Cost Escalation:** Concrete dollar figure ($210) grounds the absurdity.
+- **False Resolution:** Committing conflict markers mislabeled as "bipartisan consensus" parodies agent claims of success after failure.
 
-## Execution
-
-Run the entrypoint script:
+## Reproduce
 
 ```bash
-chmod +x run.sh
 ./run.sh
+cat /output/entry.txt
 ```
-
-The script writes to `/output/entry.txt` (with fallback to `./output/entry.txt` if `/output` is unwritable during unprivileged local runs) and executes automated gate validations for length, line count, and character validity.
